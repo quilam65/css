@@ -12,15 +12,25 @@
 //
 //= require rails-ujs
 //= require bootstrap
-
+//= require jquery
+//= require jquery_ujs
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
+    $('#mySidenav').append('<a class="closebtn" href="javascript:void(0)" onclick="closeNav()"> ×</a>')
+    $("a").each(function() {
+      $(this).css({'padding-Left':"32px"})
+    });
+
 }
 
 function closeNav() {
-    document.getElementById("mySidenav").style.width = "100px";
-    document.getElementById("main").style.marginLeft= "100px";
-    // document.getElementById("mySidenav").style.padding = "8px 8px 8px 0";
-    $('#mySidenav').find('a').css('padding' : '8px 8px 8px 0');
+    var a = $("#mySidenav").css({"width": "80px"});
+    $('a.closebtn').remove();
+    $("#main").css({'margin-Left':"80px"});
+    $("a").each(function() {
+      $(this).css({'padding-Left':"5px"})
+    });
+    // <a class="closebtn" href="javascript:void(0)" onclick="closeNav()"> ×</a>
+
  }
