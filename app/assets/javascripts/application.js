@@ -25,11 +25,11 @@ function openNav() {
 }
 
 function closeNav() {
-    var a = $("#mySidenav").css({"width": "80px"});
+    var a = $("#mySidenav").css({"width": "105px"});
     $('a.closebtn').remove();
-    $("#main").css({'margin-Left':"80px"});
+    $("#main").css({'margin-Left':"105px"});
     $("a").each(function() {
-      $(this).css({'padding-Left':"5px"})
+      $(this).css({'padding':"5px 0 0 5px"})
     });
     // <a class="closebtn" href="javascript:void(0)" onclick="closeNav()"> ×</a>
 
